@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use ECOGRAMA in your work, please cite it as below."
+title: "ECOGRAMA"
+abstract: "Spectrogram editor and audio restoration: select on the spectrogram, repair, export."
+type: software
+authors:
+  - family-names: "Chiuță"
+    given-names: "Alexandru-Ionuț"
+    alias: "Alexio"
+repository-code: "https://github.com/chiuta/ECOGRAMA"
+url: "https://ecograma.chiuta.ro"
+license: MIT
+version: "0.1.0-alpha.1"
+date-released: 2026-11-13

@@ -1,0 +1,5 @@
+# The one place that fixes the Rust version for local builds and for every CI job.
+[toolchain]
+channel = "1.97.0"
+profile = "minimal"
+components = ["clippy", "rustfmt"]

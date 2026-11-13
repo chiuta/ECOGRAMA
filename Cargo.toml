@@ -1,0 +1,20 @@
+[workspace]
+resolver = "2"
+members = ["crates/ecograma-core", "crates/ecograma-cli"]
+
+[workspace.package]
+version = "0.1.0-alpha.1"
+edition = "2024"
+rust-version = "1.88"
+license = "MIT"
+authors = ["Alexio"]
+repository = "https://github.com/chiuta/ECOGRAMA"
+
+[workspace.dependencies]
+ecograma-core = { path = "crates/ecograma-core", version = "0.1.0-alpha.1" }
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 4
+strip = true

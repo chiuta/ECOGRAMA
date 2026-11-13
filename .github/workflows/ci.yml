@@ -1,0 +1,73 @@
+# CI for ECOGRAMA. Action versions are pinned by commit hash (same pins as OSATURA).
+# The toolchain is fixed in rust-toolchain.toml (single source of the version): bump it deliberately.
+# There is deliberately no `paths-ignore`: a skipped workflow leaves a required status check pending forever.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  test:
+    name: test (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-22.04, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: dtolnay/rust-toolchain@f08ac54821369508305fcb9e0121ec6e30ae9ada # 1.97.0
+        with:
+          components: clippy, rustfmt
+      - name: Toolchain from rust-toolchain.toml
+        run: rustup toolchain install
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2
+      - name: Format
+        if: runner.os == 'Linux'
+        run: cargo fmt --all -- --check
+      - name: Tests
+        run: cargo test --workspace --locked
+      - name: Clippy (warnings are errors)
+        run: cargo clippy --workspace --all-targets --locked -- -D warnings
+      - name: Rustdoc (broken links are errors)
+        shell: bash
+        run: RUSTDOCFLAGS="-D warnings" cargo doc --workspace --no-deps --locked
+
+  wasm32:
+    name: wasm32 build
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: dtolnay/rust-toolchain@f08ac54821369508305fcb9e0121ec6e30ae9ada # 1.97.0
+        with:
+          targets: wasm32-unknown-unknown
+      - name: Toolchain from rust-toolchain.toml
+        run: rustup toolchain install && rustup target add wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@d1527c8f67ef9af357290475d4af4b0fab8f12e0 # v2
+      - name: Core compiles for the browser
+        run: cargo build -p ecograma-core --target wasm32-unknown-unknown --locked
+
+  deny:
+    name: cargo-deny (supply chain)
+    runs-on: ubuntu-22.04
+    # Informational until the first green run; then remove continue-on-error.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: dtolnay/rust-toolchain@f08ac54821369508305fcb9e0121ec6e30ae9ada # 1.97.0
+      - name: Toolchain from rust-toolchain.toml
+        run: rustup toolchain install
+      - run: cargo install cargo-deny --locked
+      - run: cargo deny check

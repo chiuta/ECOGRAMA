@@ -1,0 +1,16 @@
+[package]
+name = "ecograma-cli"
+description = "Command-line tool for ECOGRAMA"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "ecograma"
+path = "src/main.rs"
+
+[dependencies]
+ecograma-core = { workspace = true }

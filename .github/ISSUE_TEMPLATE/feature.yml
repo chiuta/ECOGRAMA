@@ -1,0 +1,10 @@
+name: Feature / Funcție
+description: Propose a feature / Propune o funcție
+body:
+  - type: textarea
+    id: what
+    attributes: { label: "What and why / Ce și de ce" }
+    validations: { required: true }
+  - type: textarea
+    id: source
+    attributes: { label: "Public source / Sursă publică", description: "Specification, standard or textbook that describes it (see CLEANROOM.md). Do not paste other tools' code." }
