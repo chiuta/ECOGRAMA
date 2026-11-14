@@ -2,13 +2,23 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-Version: 0.1.0-alpha.1 · Letzte Aktualisierung: 13.11.2026
+Version: 0.1.0-alpha.1 · Letzte Aktualisierung: 2026-11-14
 
 🌐 https://ecograma.chiuta.ro
 
 ## Status
 
 Frühes Grundgerüst (Pre-Alpha): Das Workspace baut, und die Tests laufen in der CI durch. Jede geplante Funktion ist eine offene Aufgabe in `docs/issues/`.
+
+## Geplanter Umfang
+
+- STFT mit einstellbarem Fenster und Hop, Farbtabellen (viridis, magma, Graustufen) und WAV-Lesen/-Schreiben (16/24-Bit-PCM, 32-Bit-Float).
+- Eine Spektrogrammansicht in egui mit Zoom und Verschieben.
+- Rechteck- und Lasso-Auswahlen, die eine Zeit-Frequenz-Maske erzeugen, abgeschwächt per Overlap-Add-Resynthese.
+- Spektrale Reparatur durch Interpolation benachbarter Frames und Brummentfernung, die 50/60 Hz und Obertöne erkennt.
+- Ein CLAP-Plug-in-Wrapper (VST3 später) und eine Entscheidung zum Verhältnis zu `cathar`: abhängen, interoperieren oder upstream beitragen.
+
+Nichts davon ist bisher umgesetzt: Jeder Punkt ist eine offene Aufgabe in `docs/issues/`.
 
 ## Bauen und testen
 

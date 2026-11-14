@@ -2,13 +2,23 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-Versiune: 0.1.0-alpha.1 · Ultima actualizare: 13.11.2026
+Versiune: 0.1.0-alpha.1 · Ultima actualizare: 2026-11-14
 
 🌐 https://ecograma.chiuta.ro
 
 ## Stare
 
 Schelet timpuriu (pre-alfa): workspace-ul se compilează, iar testele trec în CI. Fiecare funcție planificată este o sarcină deschisă în `docs/issues/`.
+
+## Domeniu planificat
+
+- STFT cu fereastră și pas configurabile, hărți de culori (viridis, magma, tonuri de gri) și citire/scriere WAV (PCM 16/24 biți, float 32 biți).
+- O vizualizare a spectrogramei în egui, cu zoom și derulare.
+- Selecții dreptunghiulare și cu lasou care produc o mască timp–frecvență, atenuată prin resinteză overlap-add.
+- Reparare spectrală prin interpolarea cadrelor învecinate și eliminarea zumzetului, care detectează 50/60 Hz și armonicele.
+- Un înveliș de plugin CLAP (VST3 mai târziu) și o decizie despre relația cu `cathar`: dependență, interoperare sau contribuție în amonte.
+
+Nimic din asta nu este implementat încă: fiecare punct este o sarcină deschisă în `docs/issues/`.
 
 ## Compilare și testare
 
