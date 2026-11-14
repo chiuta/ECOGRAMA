@@ -4,6 +4,8 @@
 
 Verzió: 0.1.0-alpha.1 · Utolsó frissítés: 13.11.2026
 
+🌐 https://ecograma.chiuta.ro
+
 ## Állapot
 
 Korai váz (pre-alfa): a workspace lefordul, a tesztek a CI-ben lefutnak. Minden tervezett funkció nyitott feladat a `docs/issues/` mappában.

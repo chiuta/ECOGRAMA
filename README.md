@@ -4,6 +4,8 @@
 
 Version: 0.1.0-alpha.1 · Last updated: 13.11.2026
 
+🌐 https://ecograma.chiuta.ro
+
 ## Status
 
 Early skeleton (pre-alpha): the workspace builds and the tests pass in CI. Every planned feature is an open task in `docs/issues/`.

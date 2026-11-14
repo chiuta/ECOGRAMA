@@ -4,6 +4,8 @@
 
 Versão: 0.1.0-alpha.1 · Última atualização: 13.11.2026
 
+🌐 https://ecograma.chiuta.ro
+
 ## Estado
 
 Esqueleto inicial (pré-alfa): o workspace compila e os testes passam no CI. Cada funcionalidade prevista é uma tarefa aberta em `docs/issues/`.

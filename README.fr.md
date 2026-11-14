@@ -4,6 +4,8 @@
 
 Version : 0.1.0-alpha.1 · Dernière mise à jour : 13.11.2026
 
+🌐 https://ecograma.chiuta.ro
+
 ## État
 
 Squelette précoce (pré-alpha) : le workspace compile et les tests passent en CI. Chaque fonctionnalité prévue est une tâche ouverte dans `docs/issues/`.

@@ -4,6 +4,8 @@
 
 Versiune: 0.1.0-alpha.1 · Ultima actualizare: 13.11.2026
 
+🌐 https://ecograma.chiuta.ro
+
 ## Stare
 
 Schelet timpuriu (pre-alfa): workspace-ul se compilează, iar testele trec în CI. Fiecare funcție planificată este o sarcină deschisă în `docs/issues/`.

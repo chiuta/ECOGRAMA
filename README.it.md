@@ -4,6 +4,8 @@
 
 Versione: 0.1.0-alpha.1 · Ultimo aggiornamento: 13.11.2026
 
+🌐 https://ecograma.chiuta.ro
+
 ## Stato
 
 Scheletro iniziale (pre-alfa): il workspace compila e i test passano in CI. Ogni funzione prevista è un'attività aperta in `docs/issues/`.

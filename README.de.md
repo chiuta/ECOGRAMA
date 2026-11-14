@@ -4,6 +4,8 @@
 
 Version: 0.1.0-alpha.1 · Letzte Aktualisierung: 13.11.2026
 
+🌐 https://ecograma.chiuta.ro
+
 ## Status
 
 Frühes Grundgerüst (Pre-Alpha): Das Workspace baut, und die Tests laufen in der CI durch. Jede geplante Funktion ist eine offene Aufgabe in `docs/issues/`.
