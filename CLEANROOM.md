@@ -1,5 +1,7 @@
 # ECOGRAMA provenance and independent-implementation procedure
 
+**English** · [Română](CLEANROOM.ro.md) · [Français](CLEANROOM.fr.md) · [Italiano](CLEANROOM.it.md) · [Español](CLEANROOM.es.md) · [Português](CLEANROOM.pt.md) · [Deutsch](CLEANROOM.de.md) · [Magyar](CLEANROOM.hu.md)
+
 ECOGRAMA is **independently implemented from public specifications, standards and textbooks. No third-party source code was copied.** This file says what was done; it is an engineering discipline that keeps provenance auditable, not legal advice, and not a strict clean-room guarantee (no separate specification team exists).
 
 ## Rules

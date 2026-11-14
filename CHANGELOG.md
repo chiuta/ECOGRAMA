@@ -5,6 +5,7 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) · [SemVer](htt
 ## [Unreleased]
 
 ### Changed
+- CONTRIBUTING, CODE_OF_CONDUCT, SECURITY and CLEANROOM are now complete, single-language documents in all eight languages (they were bilingual English/Romanian).
 - README in English, Romanian, French, Italian, Spanish, Portuguese, German and Hungarian: new “Planned scope” section (derived from `docs/issues/`) and ISO dates.
 
 ### Added
