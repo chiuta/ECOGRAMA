@@ -1,0 +1,12 @@
+{
+  "pages": ".",
+  "html": [
+    "index.html"
+  ],
+  "patterns": [
+    {
+      "file": "index.html",
+      "regex": "\"ver\":\"([^\"]+)\""
+    }
+  ]
+}
