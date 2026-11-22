@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-Versiune: 0.1.0-alpha.1 · Ultima actualizare: 2026-11-14
+Versiune: 0.1.0-alpha.1 · Ultima actualizare: 2026-11-22
 
 🌐 https://ecograma.chiuta.ro
 
